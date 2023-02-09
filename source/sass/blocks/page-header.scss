@@ -1,0 +1,144 @@
+.page-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-header__logo {
+  fill: $color-persian-red;
+  margin-top: 24px;
+}
+
+.page-header__button {
+  display: none;
+}
+
+.page-header__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin-top: 24px;
+}
+
+.page-header__item {
+  margin-left: 32px;
+  font-family: $ff-inter;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: calc(1em / 28);
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+
+  &--button {
+    background-color: $color-persian-red;
+    border-radius: 30px;
+    padding: 0 20px;
+
+    .page-header__link {
+      color: $color-default-white;
+    }
+  }
+}
+
+.page-header__link {
+  @include hover-focus {
+    opacity: 0.5;
+  }
+}
+
+@include vp-767 {
+  .page-header {
+    &--close {
+      min-height: 62px;
+    }
+
+    &--open {
+      position: fixed;
+      z-index: 3;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      background-color: $color-default-white;
+    }
+  }
+
+  .page-header__wrapper {
+    &--close {
+      padding-left: 15px;
+      padding-right: 15px;
+      display: block;
+    }
+
+    &--open {
+      height: 100%;
+    }
+  }
+
+  .page-header__link-logo {
+    display: block;
+    width: 100px;
+    height: 45px;
+    margin-top: 24px;
+  }
+
+  .page-header__content-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .page-header__logo {
+    margin-top: 0;
+  }
+
+  .page-header__list {
+    &--close {
+      display: none;
+    }
+
+    &--open {
+      overflow-y: scroll;
+      display: block;
+      width: 100%;
+      height: calc(100% - 74px);
+      margin-top: 24px;
+      padding-left: 0;
+    }
+  }
+
+  .page-header__button {
+    display: block;
+    border: none;
+    background-repeat: no-repeat;
+    padding: 0;
+
+    &--close {
+      background: url("../img/svg/open.svg"), $color-transparent;
+      width: 24px;
+      height: 16px;
+      margin-top: 39px;
+      margin-right: 5px;
+    }
+
+    &--open {
+      background: url("../img/svg/close.svg"), $color-transparent;
+      width: 21px;
+      height: 21px;  
+      margin-top: 36px;
+      margin-right: 7px;
+    }
+  }
+
+  .page-header__item {
+    &--open {
+      margin: 0;
+      width: 100%;
+      height: 40px;
+    }
+
+    &--button {
+      display: none;
+    }
+  }
+}

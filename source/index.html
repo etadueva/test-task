@@ -13,16 +13,73 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="background-wrapper">
-        <header>
-          <div class="container"></div>
-        </header>
+      <div class="background-wrapper background-wrapper--nojs">
+        <div class="wrapper__overlay">
+          <header class="page-header page-header--close page-header--nojs">
+            <div class="page-header__wrapper container page-header__wrapper--close">
+              <div class="page-header__content-header">
+                <a class="page-header__link-logo">
+                  <h3 class="visually-hidden">Логотип компании</h3>
+                  <svg class="page-header__logo page-header__logo--close" width="100" height="45">
+                    <use href="./img/sprite.svg#logo"></use>
+                  </svg>
+                </a>
+                <button class="page-header__button page-header__button--close" type="button">
+                  <span class="visually-hidden">Кнопка меню</span>
+                </button>
+              </div>
+              <ul class="page-header__list page-header__list--close">
+                <li class="page-header__item page-header__item--close">
+                  <a class="page-header__link page-header__link--close" href="#portfolio">Портфолио</a>
+                </li>
+                <li class="page-header__item page-header__item--close">
+                  <a class="page-header__link page-header__link--close" href="#about">О компании</a>
+                </li>
+                <li class="page-header__item page-header__item--close">
+                  <a class="page-header__link page-header__link--close" href="#contacts">Контакты</a>
+                </li>
+                <li class="page-header__item page-header__item--close page-header__item--button">
+                  <a class="page-header__link page-header__link--close" href="#form">Оставить заявку</a>
+                </li>
+              </ul>
+            </div>
+          </header>
+        </div>
         <main>
-          <section class="intro">
-            <div class="container">
-              <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
+          <section class="promo">
+            <div class="promo__wrapper container">
+              <div>
+                <h1 class="promo__title">Маркетинговое агентство.</h1>
+                <span class="promo__description">С&nbsp;нами вы растете как на дрожжах</span>
+              </div>
+              <div class="promo__wrapper-social">
+                <svg class="promo__icon" width="17" height="19">
+                  <use href="./img/sprite.svg#arrow-promo"></use>
+                </svg>
+                <ul class="promo__social-list" id="contacts">
+                  <li class="promo__social-item">
+                    <a class="promo__social-link" href="#">
+                      <svg class="promo__social-icon promo__social-icon--whats-app" width="20" height="20">
+                        <use href="./img/sprite.svg#whats-app"></use>
+                      </svg>
+                      <span class="promo__social-name">Whatsapp</span>
+                    </a>
+                  </li>
+                  <li class="promo__social-item">
+                    <a class="promo__social-link" href="#">
+                      <svg class="promo__social-icon promo__social-icon--telegram" width="20" height="17">
+                        <use href="./img/sprite.svg#telegram"></use>
+                      </svg>
+                      <span class="promo__social-name">Telegram</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </section>
+
+
+          <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
         </main>
       </div>
       <footer>
