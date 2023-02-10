@@ -1074,10 +1074,11 @@ button,
 
   .promo__social-icon--whats-app {
     width: 40px;
-    height: 40px;
+    height: 48px;
   }
 
   .promo__social-icon--telegram {
+    margin-top: 8px;
     width: 40px;
     height: 34px;
   }
