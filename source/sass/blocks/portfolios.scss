@@ -1,0 +1,241 @@
+.portfolios {
+  background-color: $color-default-white;
+  padding-top: 57px;
+  padding-bottom: 80px;
+}
+
+.portfolios__text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.portfolios__title {
+  font-family: $ff-inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 130%;
+  margin: 0;
+  letter-spacing: calc(1em / 10000);
+  color: $color-blue-charcoal;
+}
+
+.portfolios__link {
+  display: inline-block;
+  margin-top: 18px;
+
+  @include hover-focus {
+    opacity: 0.5;
+  }
+}
+
+.portfolios__link-text {
+  font-family: $ff-inter;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: $color-persian-red;
+  margin-right: 4px;
+  letter-spacing: calc(1em / 100);
+}
+
+.portfolios__link-icon {
+  fill: $color-persian-red;
+}
+
+.portfolios__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 25px;
+  row-gap: 27px;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 41px;
+}
+
+.portfolios__item {
+  position: relative;
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.portfolios__item-page-link {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+
+  @include hover-focus {
+    outline: 1px solid $color-persian-red;
+    border-radius: 8px;
+  }
+}
+
+.portfolios__item-image {
+  aspect-ratio: 5/3.8;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 16px;
+
+  &--one {
+    background: linear-gradient(90deg, #A18CD1 0%, #FBC2EB 100%), #EEEEEE;
+  }
+
+  &--two {
+    background: linear-gradient(90deg, #FF9A9E 0%, #FAD0C4 99%, #FAD0C4 100%), #EEEEEE;
+  }
+
+  &--three {
+    background: linear-gradient(90deg, #FFECD2 0%, #FCB69F 100%), #EEEEEE;
+  }
+
+  &--foure {
+    background: linear-gradient(90deg, #D4FC79 0%, #96E6A1 100%), #EEEEEE;
+  }
+
+  &--five {
+    background: linear-gradient(90deg, #FDFBFB 0%, #EBEDEE 100%), #EEEEEE;
+  }
+
+  &--six {
+    background: linear-gradient(90deg, #FFF1EB 0%, #ACE0F9 100%), #EEEEEE;
+  }
+}
+
+.portfolios__item-note {
+  display: inline-block;
+  background-color: $color-blue-charcoal;
+  color: $color-default-white;
+  border-radius: 32px;
+  font-family: $ff-inter;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+
+  &--mobile {
+    display: none;
+  }
+}
+
+.portfolios__item-link-note {
+  display: inline-block;
+  width: fit-content;
+  z-index: 2;
+
+  @include hover-focus {
+    opacity: 0.5;
+  }
+}
+
+.portfolios__item-title {
+  font-family: $ff-inter;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 130%;
+  letter-spacing: calc(1em / 104);
+  margin-top: 12px;
+  margin-bottom: 0;
+  color: $color-blue-charcoal;
+}
+
+.portfolios__item-description {
+  display: block;
+  color: $color-raven;
+  font-family: $ff-inter;
+  font-size: 18px;
+  line-height: 150%;
+  margin-top: 2px;
+  letter-spacing: calc(1em / 30);
+  z-index: 2;
+  width: fit-content;
+
+  @include hover-focus {
+    color: $color-blue-charcoal;
+  }
+}
+
+.portfolios__item-text {
+  min-height: 91px;
+}
+
+.portfolios__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 70px;
+  font-family: $ff-inter;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  border: 1px solid $color-persian-red;
+  border-radius: 36px;
+  background-color: $color-transparent;
+  color: $color-persian-red;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 42px;
+  cursor: pointer;
+
+  @include hover-focus {
+    background-color: $color-persian-red;
+    color: $color-default-white;
+  }
+}
+
+@include vp-767 {
+  .portfolios__text {
+    flex-direction: column;
+  }
+
+  .portfolios__list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 39px;
+  }
+
+  .portfolios__title {
+    margin-top: 5px;
+  }
+
+  .portfolios__link {
+    margin-top: 8px;
+  }
+
+  .portfolios__item {
+    margin-bottom: 4px;
+  }
+
+  .portfolios__item-image {
+    aspect-ratio: 5/4.34;
+  }
+
+  .portfolios__item-note {
+    &--mobile {
+      display: inline-block;
+    }
+
+    &--desktop {
+      display: none;
+    }
+  }
+
+  .portfolios__item-text {
+    min-height: auto;
+  }
+
+  .portfolios__item-title {
+    margin-top: 16px;
+    letter-spacing: calc(1em / 330);
+  }
+}

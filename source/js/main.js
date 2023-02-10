@@ -1,6 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {switchMenu} from './modules/page-header-menu';
+import {manageVisibility} from './modules/portfolios'
 
 // ---------------------------------
 
@@ -19,6 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     initModals();
     switchMenu();
+    manageVisibility();
   });
 });
 
