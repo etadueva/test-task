@@ -1,3 +1,12 @@
+.page-header {
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $color-whisper;
+}
+
 .page-header__wrapper {
   display: flex;
   justify-content: space-between;
@@ -51,6 +60,7 @@
   .page-header {
     &--close {
       min-height: 62px;
+      position: relative;
     }
 
     &--open {

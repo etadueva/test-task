@@ -57,10 +57,6 @@
 
 .portfolios__item {
   position: relative;
-
-  &--hidden {
-    display: none;
-  }
 }
 
 .portfolios__item-page-link {
@@ -190,6 +186,12 @@
   @include hover-focus {
     background-color: $color-persian-red;
     color: $color-default-white;
+  }
+}
+
+.portfolios__button-text {
+  &--hidden {
+    display: none;
   }
 }
 
