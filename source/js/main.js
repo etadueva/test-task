@@ -2,10 +2,16 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {switchMenu} from './modules/page-header-menu';
 import {manageVisibility} from './modules/portfolios';
+import SmoothScroll from 'smooth-scroll';
 
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
+  let scroll = new SmoothScroll('a[href*="#"]');
+  const scrollSmooth = () => {
+    return scroll;
+  };
+  scrollSmooth();
 
   // Utils
   // ---------------------------------

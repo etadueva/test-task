@@ -38,7 +38,7 @@
                 <li class="page-header__item page-header__item--close">
                   <a class="page-header__link page-header__link--close" href="#contacts">Контакты</a>
                 </li>
-                <li class="page-header__item page-header__item--close page-header__item--button">
+                <li class="page-header__item button-red page-header__item--close page-header__item--button">
                   <a class="page-header__link page-header__link--close" href="#form">Оставить заявку</a>
                 </li>
               </ul>
@@ -50,13 +50,13 @@
             <div class="promo__wrapper container">
               <div>
                 <h1 class="promo__title">Маркетинговое агентство.</h1>
-                <span class="promo__description">С&nbsp;нами вы растете как на дрожжах</span>
+                <span class="promo__description" id="contacts">С&nbsp;нами вы растете как на дрожжах</span>
               </div>
               <div class="promo__wrapper-social">
                 <svg class="promo__icon" width="17" height="19">
                   <use href="./img/sprite.svg#arrow-promo"></use>
                 </svg>
-                <ul class="promo__social-list" id="contacts">
+                <ul class="promo__social-list">
                   <li class="promo__social-item">
                     <a class="promo__social-link" href="#">
                       <svg class="promo__social-icon promo__social-icon--whats-app" width="20" height="20">
@@ -210,15 +210,65 @@
                   </div>
                 </li>
               </ul>
-              <button type="button" class="portfolios__button portfolios__button--open">
+              <button type="button" class="portfolios__button button-transparent portfolios__button--open">
                 <span class="portfolios__button-text portfolios__button-text--open">Все кейсы</span>
                 <span class="portfolios__button-text hidden portfolios__button-text--close">Скрыть кейсы</span>
               </button>
             </div>
           </section>
-
-
-          <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
+          <section class="about">
+            <div class="about__wrapper container">
+              <h2 class="about__title">О компании</h2>
+              <ul class="about__list-team">
+                <li class="about__item-team">
+                  <span class="about__item-team-quantity">5</span>
+                  <span class="about__item-team-name">Отделов</span>
+                </li>
+                <li class="about__item-team">
+                  <span class="about__item-team-quantity">5</span>
+                  <span class="about__item-team-name">Маркетологов</span>
+                </li>
+                <li class="about__item-team">
+                  <span class="about__item-team-quantity">3</span>
+                  <span class="about__item-team-name">Дизайнера</span>
+                </li>
+                <li class="about__item-team">
+                  <span class="about__item-team-quantity">3</span>
+                  <span class="about__item-team-name">Копирайтера</span>
+                </li>
+                <li class="about__item-team">
+                  <span class="about__item-team-quantity">7</span>
+                  <span class="about__item-team-name">Разработчиков</span>
+                </li>
+              </ul>
+              <div class="about__description">
+                <span class="about__description-text">Мы — команда специалистов с опытом, энтузиазмом и лёгким недосыпом. Маркетинговое агентство «Дрожжи» было основано<br> в&nbsp;2015&nbsp;году, как компания, где можно получить комплексное интернет- и oффлайн&#8209;продвижение. На сегодняшний день мы не зависим ни от ниши, ни от географии, ни от специфики продукта.<br>В портфолио компании сотни успешных кейсов, способных помочь вам в реализации своей идеи.</span>
+                <ul class="about__description-list">
+                  <li class="about__description-item">
+                    <span class="about__description-item-quantity">1000+</span>
+                    <span class="about__description-item-name about__description-item-name--one">Реализованных проектов</span>
+                  </li>
+                  <li class="about__description-item">
+                    <span class="about__description-item-quantity">92</span>
+                    <span class="about__description-item-name">Клиента доверили нам свои проекты</span>
+                  </li>
+                  <li class="about__description-item">
+                    <span class="about__description-item-quantity">5+</span>
+                    <span class="about__description-item-name">Лет успешной работы</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="about__wrapper-image">
+                <a class="about__image-link btn" data-open-modal="feedback">
+                  <picture>
+                    <source srcset="./img/team.webp, ./img/team@2x.webp 2x">
+                    <img class="about__image" src="./img/team.jpg" srcset="./img/team@2x.jpg" width="676" height="513" alt="Фото команды.">
+                  </picture>
+                </a>
+              </div>
+              <a class="about__button button-transparent" href="#">Подробнее</a>
+            </div>
+          </section>
         </main>
       </div>
       <footer>
@@ -231,11 +281,12 @@
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
+          <picture>
+            <source srcset="./img/team.webp, ./img/team@2x.webp 2x">
+            <img class="modal__image" src="./img/team.jpg" srcset="./img/team@2x.jpg" width="676" height="513" alt="Фото команды.">
+          </picture>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
+            <span class="modal__button-text">Закрыть просмотр</span>
           </button>
         </div>
       </div>

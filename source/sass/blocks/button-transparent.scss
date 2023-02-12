@@ -1,0 +1,19 @@
+.button-transparent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $ff-inter;
+  text-transform: uppercase;
+  border-radius: 36px;
+  border: 1px solid $color-persian-red;
+  background-color: $color-transparent;
+  color: $color-persian-red;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+
+  @include hover-focus {
+    background-color: $color-persian-red;
+    color: $color-default-white;
+  }
+}

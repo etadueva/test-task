@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* stylelint-disable */
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -698,53 +700,6 @@ button,
   display: none;
 }
 
-.modal__wrapper {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  min-height: 100%;
-  padding: 60px 40px;
-}
-
-.modal__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.modal__content {
-  position: relative;
-  width: 600px;
-  padding: 40px;
-  background-color: #ffffff;
-}
-
-.modal__close-btn {
-  position: absolute;
-  top: 22px;
-  right: 22px;
-  z-index: 1;
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  background: rgba(255, 255, 255, 0);
-  border: none;
-  cursor: pointer;
-}
-
 .modal--responsive .modal__content {
   width: 100%;
 }
@@ -772,6 +727,63 @@ button,
   visibility: visible;
   opacity: 1;
   pointer-events: auto;
+}
+
+.modal__wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 0 40px;
+}
+
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.modal__content {
+  position: relative;
+  height: 100%;
+  width: auto;
+  padding: 0;
+  border-radius: 8px;
+  aspect-ratio: 1.4/1;
+  background-color: #ffffff;
+}
+
+.modal__image {
+  height: 100%;
+  width: 100%;
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  z-index: 1;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  background: rgba(255, 255, 255, 0);
+  border: 1px solid #ffffff;
+  border-radius: 30px;
+  width: 122px;
+  cursor: pointer;
 }
 
 .page-header {
@@ -828,8 +840,6 @@ button,
 }
 
 .page-header__item--button {
-  background-color: #D22020;
-  border-radius: 30px;
   padding: 0 20px;
 }
 
@@ -1136,6 +1146,22 @@ button,
 }
 
 .portfolios__button {
+  font-size: 18px;
+  line-height: 30px;
+  margin-top: 42px;
+  padding: 20px 70px;
+}
+
+.portfolios__button-text--hidden {
+  display: none;
+}
+
+.button-red {
+  background-color: #D22020;
+  border-radius: 30px;
+}
+
+.button-transparent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1145,39 +1171,186 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 20px 70px;
   font-family: "Inter", "Arial", sans-serif;
-  font-size: 18px;
-  line-height: 30px;
   text-transform: uppercase;
-  border: 1px solid #D22020;
   border-radius: 36px;
+  border: 1px solid #D22020;
   background-color: rgba(255, 255, 255, 0);
   color: #D22020;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 42px;
   cursor: pointer;
 }
 
-.portfolios__button.focus-visible:focus {
+.button-transparent.focus-visible:focus {
   background-color: #D22020;
   color: #ffffff;
 }
 
-.portfolios__button-text--hidden {
-  display: none;
+.about {
+  background-color: #ffffff;
+  padding-top: 29px;
+  padding-bottom: 35px;
+}
+
+.about__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
+}
+
+.about__title {
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 130%;
+  letter-spacing: 0.005em;
+  color: #212529;
+  margin: 0;
+  grid-column: 1/-1;
+}
+
+.about__list-team {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style-type: none;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 32px;
+  text-transform: lowercase;
+  margin: 60px 0 0;
+  padding: 0;
+  grid-column: 1/-1;
+}
+
+.about__item-team {
+  margin-right: 35px;
+  padding: 5px 0;
+}
+
+.about__item-team-quantity {
+  color: #D22020;
+  margin-right: 7px;
+}
+
+.about__item-team-name {
+  color: #212529;
+}
+
+.about__wrapper-image {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  grid-row: 3/5;
+}
+
+.about__image-link {
+  padding: 0;
+  background-color: #ffffff;
+  margin-top: 60px;
+  position: relative;
+}
+
+.about__image-link::before {
+  content: "Команда агентства «Дрожжи»";
+  display: block;
+  color: #8D959D;
+  position: absolute;
+  bottom: -32px;
+  left: calc(50% - 120px);
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.0333333333em;
+}
+
+.about__image {
+  background-color: #212529;
+}
+
+.about__description {
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 150%;
+  margin-top: 60px;
+  margin-left: 3px;
+  letter-spacing: 0.0344827586em;
+}
+
+.about__description-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 10px;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
+  max-width: 506px;
+  margin-top: 65px;
+}
+
+.about__description-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.about__description-item-quantity {
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 120%;
+  color: #D22020;
+}
+
+.about__description-item-name {
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 150%;
+  text-transform: lowercase;
+  margin-top: 10px;
+}
+
+.about__button {
+  font-size: 18px;
+  padding: 5px 67px;
+  margin-left: 0;
+  margin-top: 32px;
+  margin-bottom: 17px;
+  letter-spacing: 0.005em;
+  min-height: 72px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 @media (min-width: 1440px) {
   .promo {
     padding-top: 0;
-    min-height: 940px;
+    min-height: 1024px;
   }
 
   .promo__wrapper {
     position: relative;
-    min-height: 940px;
+    min-height: 1024px;
   }
 
   .background-wrapper {
@@ -1196,17 +1369,17 @@ button,
     padding: 0 16px;
   }
 
+  .modal--fit-content .modal__content {
+    width: 100%;
+  }
+
   .modal__wrapper {
     padding: 60px 16px;
   }
 
   .modal__content {
     width: 100%;
-    padding: 20px;
-  }
-
-  .modal--fit-content .modal__content {
-    width: 100%;
+    padding: 0;
   }
 
   .page-header--close {
@@ -1399,6 +1572,79 @@ button,
     margin-top: 16px;
     letter-spacing: 0.003030303em;
   }
+
+  .portfolios__button {
+    width: 100%;
+    margin-top: 28px;
+  }
+
+  .about {
+    padding-top: 18px;
+  }
+
+  .about__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .about__description-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .about__list-team {
+    margin: 31px 0 0;
+  }
+
+  .about__item-team {
+    margin-right: 0;
+  }
+
+  .about__item-team:not(:last-child) {
+    margin-bottom: 36px;
+  }
+
+  .about__description {
+    margin-top: 34px;
+    margin-left: 0;
+  }
+
+  .about__description-list {
+    margin-top: 33px;
+  }
+
+  .about__description-item:not(:last-child) {
+    margin-bottom: 34px;
+  }
+
+  .about__description-item-name--one {
+    margin-right: 70px;
+  }
+
+  .about__wrapper-image {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  .about__button {
+    margin: 32px 21px 0 18px;
+    min-height: 59px;
+  }
+
+  .about__image-link {
+    margin-top: 32px;
+  }
 }
 
 @media (hover: hover) {
@@ -1431,7 +1677,7 @@ button,
     color: #212529;
   }
 
-  .portfolios__button:hover:not(.focus-visible) {
+  .button-transparent:hover:not(.focus-visible) {
     background-color: #D22020;
     color: #ffffff;
   }
