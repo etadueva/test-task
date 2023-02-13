@@ -57,6 +57,16 @@
   background-color: $color-default-white;
   margin-top: 60px;
   position: relative;
+  width: 100%;
+  padding-top: 75.5%;
+  background-image: url("../img/team.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+
+  @include retina {
+    background-image: url("../img/team@2x.jpg");
+  }
 
   &::before {
     content: "Команда агентства «Дрожжи»";
@@ -188,5 +198,7 @@
 
   .about__image-link {
     margin-top: 32px;
+    padding-top: 104%;
+    background-position: -53px 0;
   }
 }

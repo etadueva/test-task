@@ -1257,6 +1257,12 @@ button,
   background-color: #ffffff;
   margin-top: 60px;
   position: relative;
+  width: 100%;
+  padding-top: 75.5%;
+  background-image: url("../img/team.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 8px;
 }
 
 .about__image-link::before {
@@ -1644,6 +1650,8 @@ button,
 
   .about__image-link {
     margin-top: 32px;
+    padding-top: 104%;
+    background-position: -53px 0;
   }
 }
 
@@ -1686,5 +1694,9 @@ button,
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .background-wrapper {
     background-image: url("../img/promo@2x.jpg");
+  }
+
+  .about__image-link {
+    background-image: url("../img/team@2x.jpg");
   }
 }
