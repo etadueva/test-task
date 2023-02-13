@@ -1,0 +1,161 @@
+.form-container {
+  background-color: $color-default-white;
+  padding-top: 25px;
+  padding-bottom: 145px;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: $color-link-water;
+    bottom: 0;
+  }
+}
+
+.form-container__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2.1fr;
+}
+
+.form-container__title {
+  grid-column: 1 / -1;
+  font-family: $ff-inter;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 130%;
+  margin: 0;
+  letter-spacing: calc(1em / 135);
+  padding-right: 32px;
+}
+
+.form-container__about-manager {
+  margin-top: 50px;
+}
+
+.form-container__image-manager {
+  margin-left: 3px;
+}
+
+.form-container__name-manager {
+  font-family: $ff-inter;
+  font-size: 24px;
+  line-height: 130%;
+  margin: 32px 0 0;
+  letter-spacing: calc(1em / 1000);
+}
+
+.form-container__description-manager {
+  display: block;
+  font-family: $ff-inter;
+  font-size: 18px;
+  line-height: 150%;
+  margin-top: 6px;
+  letter-spacing: calc(1em / 26);
+}
+
+.form-container__form {
+  grid-column: 2 / -1;
+  grid-row: 2 / 4;
+  margin-top: 31px;
+}
+
+.form-container__links {
+  margin-top: 72px;
+  margin-left: 3px;
+}
+
+.form-container__links-title {
+  margin: 0;
+  font-family: $ff-inter;
+  font-size: 24px;
+  line-height: 130%;
+}
+
+.form-container__links-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 17px;
+}
+
+.form-container__links-item {
+  margin-bottom: 13px;
+}
+
+.form-container__link {
+  color: $color-persian-red;
+  font-family: $ff-inter;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: lowercase;
+  letter-spacing: calc(1em / 24);
+  display: inline-block;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 101%;
+    background-color: $color-persian-red;
+    opacity: 0.4;
+    bottom: -4px;
+  }
+
+  @include hover-focus {
+    filter: saturate(200);
+
+    .form-container__link-icon {
+      opacity: 1;
+    }
+  }
+}
+
+@include vp-767 {
+  .form-container {
+    padding-top: 66px;
+    padding-bottom: 45px;
+  }
+
+  .form-container__form {
+    margin-top: 36px;
+  }
+
+  .form-container__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-container__title {
+    padding-right: 16px;
+  }
+
+  .form-container__about-manager {
+    margin-top: 14px;
+    padding-right: 16px;
+  }
+
+  .form-container__image-manager {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .form-container__name-manager {
+    margin-top: 6px;
+  }
+
+  .form-container__links {
+    margin-left: 0;
+    margin-top: 31px;
+  }
+
+  .form-container__link {
+    &::after {
+      width: 118%;
+    }
+  }
+}

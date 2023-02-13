@@ -266,10 +266,85 @@
               <a class="about__button button-transparent" href="#">Подробнее</a>
             </div>
           </section>
+          <section class="form-container">
+            <div class="form-container__wrapper container container--form">
+              <h2 class="form-container__title">Оставьте заявку</h2>
+              <div class="form-container__about-manager">
+                <picture>
+                  <source srcset="./img/manager.webp, ./img/manager@2x.webp 2x">
+                  <img class="form-container__image-manager" src="./img/manager.png" srcset="o./img/manager@2x.png" width="200" height="200" alt="Фото руководителя.">
+                </picture>
+                <h3 class="form-container__name-manager">Юлия Дижа</h3>
+                <span class="form-container__description-manager">Поможет запустить ваш проект</span>
+              </div>
+              <form class="form-container__form form" action="https://">
+                <fieldset class="form__group">
+                  <legend class="visually-hidden">Данные пользователя.</legend>
+                  <label class="form__meaning form__meaning--name" for="name">Ваше имя *</label>
+                  <input class="form__input form__input--name" type="text" name="user-name" id="name" required>
+                  <label class="form__meaning" for="contact">
+                    <span class="form__meaning-desktop">Телефон или мессенджер *</span>
+                    <span class="form__meaning-mobile">Телефон *</span>
+                  </label>
+                  <input class="form__input form__input--phone" type="text" name="user-phone" id="contact" required>
+                  <label class="form__meaning form__meaning--textarea" for="message">Краткое описание задачи *</label>
+                  <textarea class="form__input form__input--textarea" name="message" id="message" required></textarea>
+                  <button class="form__button button-red" type="submit">Отправить</button>
+                </fieldset>
+              </form>
+              <div class="form-container__links">
+                <h3 class="form-container__links-title">Скачать брифинги на:</h3>
+                <ul class="form-container__links-list">
+                  <li class="form-container__links-item">
+                    <a class="form-container__link" href="#">
+                      <span class="form-container__link-text">Разработку логотипа</span>
+                      <svg class="form-container__link-icon" width="11" height="11">
+                        <use href="./img/sprite.svg#arrow-form"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="form-container__links-item">
+                    <a class="form-container__link" href="#">
+                      <span class="form-container__link-text">Разработку сайта</span>
+                      <svg class="form-container__link-icon" width="11" height="11">
+                        <use href="./img/sprite.svg#arrow-form"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="form-container__links-item">
+                    <a class="form-container__link" href="#">
+                      <span class="form-container__link-text">Разработку лендинга</span>
+                      <svg class="form-container__link-icon" width="11" height="11">
+                        <use href="./img/sprite.svg#arrow-form"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
         </main>
       </div>
-      <footer>
-        <div class="container"></div>
+      <footer class="footer-container">
+        <div class="footer-container__wrapper container">
+          <ul class="footer-container__list">
+            <li class="footer-container__item">
+              <span class="footer-container__text">2015-2021 © Дрожжи™</span>
+            </li>
+            <li class="footer-container__item">
+              <span class="footer-container__text">ООО «РВБ-Маркетинг»</span>
+            </li>
+            <li class="footer-container__item">
+              <span class="footer-container__text">Политика конфиденциальности</span>
+            </li>
+          </ul>
+          <a class="footer-container__link-logo" href="#">
+            <h3 class="visually-hidden">Логотип компании</h3>
+            <svg class="footer-container__logo" width="106" height="48">
+              <use href="./img/sprite.svg#logo"></use>
+            </svg>
+          </a>
+        </div>
       </footer>
     </div>
 
