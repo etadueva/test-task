@@ -126,3 +126,18 @@
   width: 122px;
   cursor: pointer;
 }
+
+@include vp-767 {
+  .modal__content {
+    height: auto;
+    width: 100%;
+  }
+
+  .modal__close-btn {
+    width: 92px;
+  }
+
+  .modal__button-text {
+    font-size: 12px;
+  }
+}
